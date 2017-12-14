@@ -9,8 +9,11 @@
 </head>
 <body>
 
+  <!--&#735;&#9776;-->
+
   <!-- Naviagtion Start -->
   <nav class="nav">
+    <div class="ham" tabindex="0"><span></span></div>
     <div class="wide-wrapper"> <!-- Used to center nav content -->
       <a href="#home" class="smooth-scroll">
         <!-- Logo Start -->
@@ -35,7 +38,7 @@
 
     <!-- Section start/ home-->
     <section id="home" class="section-start">
-      <div class="start-wrap"> <!-- Used to center content -->
+      <div class="start-wrap"> <!-- Used to group content to better use flexbox -->
         <h1 class="start-title">Arboreal</h1>
         <h2 class="slogan">A workplace that is a alive create ideas that live on.</h2>
       </div>
@@ -98,7 +101,7 @@
     <!-- Section Themes End -->
 
     <!-- Section Divider Start -->
-    <div class="section-divider divider-img2"></div>
+    <div class="section-divider"></div>
     <!-- Section Divider End -->
 
     <!-- Section Price Start -->
@@ -109,34 +112,36 @@
         <p class="paragraph center">Find the plan that suits you and your business!</p>
       </div>
 
-      <article class="price-box">
-        <h3 class="small-title">Standard</h3>
-        <ul class="small-paragraph">
-          <li>Watering not included</li>
-          <li>No change of dead plants, monthly plant change</li>
-        </ul>
-        <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
-      </article>
+      <div class="price-wrap"> <!-- ie är dum -->
+        <article class="price-box">
+          <h3 class="small-title">Standard</h3>
+          <ul class="small-paragraph">
+            <li>Watering not included</li>
+            <li>No change of dead plants, monthly plant change</li>
+          </ul>
+          <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
+        </article>
 
-      <article class="price-box">
-        <h3 class="small-title">Premium</h3>
-        <ul class="small-paragraph">
-          <li>Watering included</li>
-          <li>Exchange of dead plants included, monthly plant change</li>
-        </ul>
-        <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
-      </article>
+        <article class="price-box">
+          <h3 class="small-title">Premium</h3>
+          <ul class="small-paragraph">
+            <li>Watering included</li>
+            <li>Exchange of dead plants included, monthly plant change</li>
+          </ul>
+          <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
+        </article>
 
-      <article class="price-box">
-        <h3 class="small-title">Exclusive</h3>
-        <ul class="small-paragraph">
-          <li>Web-controlled automated watering system included</li>
-          <li>Change of dead plants included, weekly plant exchange</li>
-          <li>Surveillence system for every plant. 24/7 support for emergencies</li>
-          <li>Only locally grown plants. Exotic plants flown in by private jet</li>
-        </ul>
-        <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
-      </article>
+        <article class="price-box">
+          <h3 class="small-title">Exclusive</h3>
+          <ul class="small-paragraph">
+            <li>Web-controlled automated watering system included</li>
+            <li>Change of dead plants included, weekly plant exchange</li>
+            <li>Surveillence system for every plant. 24/7 support for emergencies</li>
+            <li>Only locally grown plants. Exotic plants flown in by private jet</li>
+          </ul>
+          <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
+        </article>
+      </div>
 
     </section>
     <!-- Section Price End -->

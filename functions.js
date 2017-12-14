@@ -11,4 +11,8 @@ $(document).ready(function(){
       });
     }
   });
+  $(".ham").on('click', function(){
+    $(".nav").toggleClass("active");
+    $(".menu").toggleClass("active");
+  })
 });

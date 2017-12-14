@@ -13,16 +13,11 @@ body, html{
     color: #444444;
     text-decoration: none;
   }
-    .menu a:visited{
-      color: #444444;
-    }
+    .menu a:visited{ color: #444444; }
     .menu a:hover,
-    .menu a:focus{
-      color: #00A99D;
-    }
-    .menu a:active{
-      color: #444444;
-    }
+    .menu a:focus{ color: #00A99D; }
+    .menu a:active{ color: #444444; }
+  /* Footer */
   .footer-links li{
     display: inline;
     padding: 0 1rem;
@@ -32,37 +27,23 @@ body, html{
       text-decoration: none;
     }
     .footer-links li a:visited,
-    .footer-links li a:focus{
-      color: white;
-    }
-    .footer-links li a:hover{
-      color: #565656;
-    }
-    .footer-links li a:active{
-      color: white;
-    }
+    .footer-links li a:focus{ color: white; }
+    .footer-links li a:hover{ color: #565656; }
+    .footer-links li a:active{ color: white; }
 
 
-/* Global classes */
   /* Clearfix */
-  .clearfix{
-    clear: both;
-  }
+  .clearfix{ clear: both; }
   /* Center content */
-  .wrapper{
+  .wrapper, .wide-wrapper{
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 960px;
     margin: 0 auto;
   }
-  .wide-wrapper{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+  .wrapper{ max-width: 960px; }
+  .wide-wrapper{ max-width: 1200px; }
+  /* Default text styles */
   .big-title{
     font-size: 4rem;
     padding: 0px 0 5.6rem 0;
@@ -88,18 +69,13 @@ body, html{
     color: #747474;
     list-style: circle;
   }
-    .small-paragraph ul{
-      list-style: circle;
-    }
-    .small-paragraph li{
-      padding: 0.3rem 0;
-      margin: 0;
-    }
+    .small-paragraph li{ padding: 0.3rem 0; }
   .center{ text-align: center; }
   .left{ text-align: left; }
   .right{ text-align: right;}
 
   .btn{
+    padding: 0.6rem 1rem;
     font-size: 1rem;
     color: white;
     border-radius: 4px;
@@ -109,15 +85,9 @@ body, html{
     text-align: center;
     text-decoration: none;
   }
-    .btn:visited{
-      background: #00A99D;
-    }
-    .btn:hover{
-      background: #009b8e;
-    }
-    .btn:active{
-      background: #009b8e;
-    }
+    .btn:visited{ background: #00A99D; }
+    .btn:hover{ background: #009b8e; }
+    .btn:active{ background: #009b8e; }
 
 
 
@@ -130,40 +100,68 @@ body, html{
   width: 100%;
   height: 5rem;
   background: white;
+  overflow: visible;
 }
+  .ham{
+    z-index: 101;
+    position: fixed;
+    display: none;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    background: white;
+    cursor: pointer;
+  }
+    .ham span{
+      position: absolute;
+      top: 1.5rem;
+      left: 0.6rem;
+      width: 1.8rem;
+      height: 2px;
+      background: #333;
+      transition: 0.2s all ease;
+    }
+      .ham span::before, .ham span::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 1.8rem;
+        height: 2px;
+        background: #333;
+        transition: 0.2s all ease;
+      }
+      .ham span::before{ top: -0.5rem; }
+      .ham span::after{ top: 0.5rem; }
+      .nav.active .ham span{ background: transparent; }
+      .nav.active .ham span::before{ transform: rotate(-45deg); top: 0; }
+      .nav.active .ham span::after{ transform: rotate(45deg); top: 0; }
   .nav-logo-svg{
     position: relative;
     float: left;
     top: 0.7rem;
+    left: 1rem;
     width: 2.4rem;
+    height: 3.4rem;
   }
   .nav .menu{
+    z-index: 101;
     position: absolute;
     right: 0;
-    margin: 0 3rem 0 3rem;
+    margin: 1.8rem 3rem 0 3rem;
     padding: 0;
     height: 100%;
-    list-style: none;
   }
   .nav .menu li{
-    position: relative;
     display: inline;
     font-size: 1rem;
-    top: 1.8rem;
     margin: 0 1rem;
   }
 
 
-
-/* main content */
-.main{
-  margin: 0;
-  padding: 0;
-}
-
-
 /* Section divider */
 .section-divider{
+  z-index: 1; /* This will fix the jumping glitch in IE11 */
   width: 100%;
   min-height: 20rem;
   height: 25vh;
@@ -172,119 +170,80 @@ body, html{
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-}
-.divider-img2{
   background-image: url("./img/hero-img/leaves_s.jpg");
 }
 
 
 /* Seaction  start */
 .section-start{
-  position: relative;
   width: 100%;
   min-height: 25rem;
   height: 70vh;
   padding-top: 5rem;
-
   display: flex;
   justify-content:  space-around;
   align-items: center;
   flex-wrap: wrap;
-
   background: #00A99D;
   background-image: url("./img/hero-img/leaves2_s.jpg");
   background-size: cover;
   background-position: center;
 }
-  .start-wrap{
+  .start-title, .slogan{
+    margin: 0;
+    padding: 0;
     width: 100%;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(87, 87, 87, 1);
   }
   .start-title{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
     font-size: 5.2rem;
     font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(87, 87, 87, 1);
   }
   .slogan{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
     font-size: 2.2rem;
     font-weight: 100;
-    letter-spacing: 1px;
-    text-shadow: 0 0 10px rgba(87, 87, 87, 1);
+    box-sizing: border-box;
   }
 
 
 /* Section  About */
-.section-about{
-  position: relative;
-  width: 100%;
-  padding: 8.5rem 0;
-}
-
+.section-about{ padding: 8.5rem 1rem; }
 
 
 /* Section Theme */
 .section-theme{
-  position: relative;
-  width: 100%;
-  padding: 0px 0 5.6rem 0;
-  overflow: auto;
+  padding: 0 0 8.5rem 0;
 }
 .theme-section{
   padding: 0 3rem 3rem 3rem;
   box-sizing: border-box;
   display: flex;
+  flex-direction: row;
 }
+  /* Use reverse the position of the theme elements */
   .theme-section.reverse{
     flex-direction: row-reverse;
     text-align: right;
   }
-  .theme-img{
-    flex: 0 1 35%;
-  }
+  .theme-img{ flex: 0 1 35%; }
+    .theme-img img{ width: 100%; }
   .theme-text{
     flex: 0 1 65%;
     display: flex;
     align-items: center;
   }
-    .theme-text-position{
-      position: relative;
-      top: 12.5%;
-      padding: 0 3.75rem 3.75rem 3.75rem;
-    }
-  .theme-img img{
-    width: 100%;
-  }
-
-
-
-
-
-
+    .theme-text-position{ padding: 3.75rem; }
 
 
 
 /* Section Price */
 .section-price{
-  position: relative;
   padding: 10rem 0rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  flex-direction: row;
 }
-  .price-header{
-    width: 100%;
-  }
+  .price-header{ width: 100%; }
   .price-header .big-title{
     padding: 0;
     margin: 0rem 0 1rem 0;
@@ -293,35 +252,33 @@ body, html{
       padding: 0;
       margin: 0rem 0 7.5rem 0;
     }
+    .price-wrap{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: center;
+      flex-direction: row;
+    }
 .section-price article{
-  position: relative;
-  flex: 0 0 18rem;
-  margin: 1.5rem 1rem;
+  flex: 1 1 30%;
+  margin: 1rem 1rem;
   padding: 0rem 1rem 2rem 1rem;
   border: 1px solid #e1e1e1;
   border-radius: 0.5rem;
   box-sizing: border-box;
   transition: all 0.2s ease;
-
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
+  background: white;
 }
-  .price-box:nth-child(2){ order: 1; }
-  .price-box:nth-child(3){ order: 3; }
-  .price-box:nth-child(4){ order: 2; transform: scale(1.1); }
-
-  .price-box:hover{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
+  .price-box:nth-child(1){ order: 1; }
+  .price-box:nth-child(2){ order: 3; }
+  .price-box:nth-child(3){ order: 2; transform: scale(1.1); }
+  .price-box:hover{ box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
   .button-price{
     align-self: flex-end;
     width: 100%;
-    padding: 0.6rem 0;
   }
-
-
-
 
 
 
@@ -331,9 +288,27 @@ body, html{
   width: 100%;
   background: #00A99D;
   background: linear-gradient(to bottom, #00a99d 0%,#009b8e 100%);
-  overflow: auto;
   box-sizing: border-box;
 }
+.contact-body{
+  margin: 3.5rem 0 0 0;
+  background: white;
+  display: flex;
+}
+  .contact-s1{
+    flex: 1 1 65%;
+    padding: 1.6rem;
+    background: white;
+  }
+  .contact-s2{
+    flex: 1 1 35%;
+    padding: 1.6rem;
+    background: #079188;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
   .contact-head .small-title,
   .contact-head .title,
   .contact-head .big-title{
@@ -345,48 +320,30 @@ body, html{
     padding: 2rem 0;
     color: white;
   }
-  .contact-info{
-    color: white;
-  }
-    .contact-info .small-title{
-      padding-bottom: 20px;
-    }
+  .contact-info{ color: white; }
+    .contact-info .small-title{ padding-bottom: 20px; }
     .contact-info p{
       font-size: 0.97rem;
       padding: 0 2.7rem;
       margin: 0rem 0rem;
     }
-    .icon-home::before{
+    .icon-home::before,
+    .icon-phone::before{
       content: "";
       position: relative;
       top: 1.8rem;
       left: -2.6rem;
       display: block;
-      width: 25px;
-      height: 25px;
-      background-image: url("./img/contact/home.png");
+      width: 1.5rem;
+      height: 1.5rem;
       background-position: center;
       background-size: cover;
     }
-    .icon-phone::before{
-      content: "";
-      position: relative;
-      top: 1.6rem;
-      left: -2.6rem;
-      display: block;
-      width: 25px;
-      height: 25px;
-      background-image: url("./img/contact/phone.png");
-      background-position: center;
-      background-size: cover;
-    }
-  .contact-icons{
-    position: relative;
-  }
+    .icon-home::before{ background-image: url("./img/contact/home.png"); }
+    .icon-phone::before{ background-image: url("./img/contact/phone.png"); }
     .contact-icons img{
-      position: relative;
-      top: 7px;
-      width: 28px;
+      margin-top: 7px;
+      width: 1.5rem;
       margin-right: 1rem;
       float: left;
     }
@@ -397,92 +354,40 @@ body, html{
       letter-spacing: 1px;
     }
 
-
-
-  .contact-body{
-    margin: 3.5rem 0 0 0;
-    background: white;
-    display: flex;
-  }
-    .contact-s1{
-      flex: 1 1 65%;
-      padding: 1.6rem;
-      background: white;
-    }
-    .contact-s2{
-      flex: 1 1 35%;
-      padding: 1.6rem;
-      background: #079188;
-
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-
-
-
   /* Contact Form */
-  .contact-form{
-    width: 100%;
-  }
-    .contact-form .fifty{
-      width: 50%;
-      padding: 0 0.5rem 0 0;
-      float: left;
-      box-sizing: border-box;
-    }
+    .contact-form .fifty,
     .contact-form .fifty2{
       width: 50%;
-      padding: 0 0 0 0.5rem;
       float: left;
       box-sizing: border-box;
     }
-    .contact-form .label{
-      width: 100%;
-      padding: 0 0 0 0.6rem;
-      font-size: 1rem;
-      color: #444444;
-    }
-    .contact-form .input{
-      width: 100%;
-      margin-bottom: 1rem;
-      padding: 0.5rem;
-      font-size: 1rem;
-      box-sizing: border-box;
-      border: 1px solid white;
-      border-bottom: 1px solid #565656;
-    }
+    .contact-form .fifty{ padding: 0 0 0.5rem 0; }
+    .contact-form .fifty2{ padding: 0 0 0 0.5rem; }
+    .contact-form .input,
     .contact-form .textarea{
       width: 100%;
       min-width: 100%;
       max-width: 100%;
-      height: 5rem;
-      min-height: 3rem;
       padding: 0.5rem;
-      font-size: 1rem;
       box-sizing: border-box;
       border: 1px solid white;
+      font-size: 1rem;
       border-bottom: 1px solid #565656;
+    }
+    .contact-form .input{ margin-bottom: 1rem; }
+    .contact-form .textarea{
+      height: 5rem;
+      min-height: 3rem;
     }
     .contact-form .submit{
       position: relative;
-      left: calc(100% - 6rem);
+      left: 100%;
+      transform: translateX(-100%);
       margin: 0.5rem;
-      padding: 0.6rem 1.2rem;
     }
 
-
-
-
-
-
-
 /* Section footer */
-.footer{
-  background: #009B8E;
-}
+.footer{ background: #009B8E; }
 .footer .wrapper{
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding: 3rem 3rem;
@@ -491,9 +396,69 @@ body, html{
   justify-content: space-between;
   align-items: center;
 }
-  .footer-logo{
-    height: 75px;
+  .footer-logo{ height: 75px; }
+
+
+@media screen and (max-width:1000px){
+
+  /* Nav */
+  .ham{ display: block; }
+  .nav .menu{
+    position: fixed;
+    top: 5rem;
+    left: 100%;
+    margin: 0;
+    width: 100%;
+    height: calc(100% - 5rem);
+    background: white;
+    transition: 0.2s all ease;
   }
-  .footer-links{
-    list-style: none;
+  .nav.active .menu{ left: 0 !important; }
+  .menu.active{ left: 0 !important; }
+  .nav .menu li{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    margin: 0;
   }
+
+  /* Start */
+  .slogan { font-size: 1.5rem; padding: 1rem; }
+
+  /* Themes */
+  .theme-section{ flex-wrap: wrap; padding: 3rem 3rem 3rem 3rem; }
+  .theme-section.reverse{ text-align: left; }
+  .theme-img, .theme-text{ flex: 0 1 50%; }
+  .theme-text { align-items: flex-start; }
+  .theme-text-position{ padding: 0rem 2rem; }
+
+  /* Divider */
+  .section-divider{ background-attachment: scroll; }
+
+  /* Price */
+  .section-price{ flex-wrap: wrap; }
+  .price-wrap{ flex-wrap: wrap; }
+  .section-price article{ flex: 0 0 270px; }
+  .price-box:nth-child(1){ order: 1; }
+  .price-box:nth-child(2){ order: 2; }
+  .price-box:nth-child(3){ order: 3; transform: scale(1);
+  }
+
+  /* Contact */
+  .contact-body{ flex-wrap: wrap; }
+  .contact-s1, .contact-s2{ flex: 1 1 100%; }
+  .contact-info .small-title { padding-bottom: 0; }
+  .contact-icons{ margin-top: 2rem; }
+}
+
+@media screen and (max-width:768px){
+  /* Themes */
+  .theme-img, .theme-text{ flex: 0 1 100%; }
+}
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+   .section-divider{
+     background-attachment: scroll;
+   }
+}
