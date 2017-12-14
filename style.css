@@ -409,7 +409,7 @@ main{ margin-top: 5rem; }
   /* Price */
   .price-box:nth-child(1){ order: 1; }
   .price-box:nth-child(2){ order: 2; }
-  .price-box:nth-child(3){ order: 3; transform: scale(1.0);
+  .price-box:nth-child(3){ order: 3; transform: scale(1.0); }
 }
 @media screen and (max-width:768px){
 
