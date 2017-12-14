@@ -9,11 +9,8 @@
 </head>
 <body>
 
-  <!--&#735;&#9776;-->
-
   <!-- Naviagtion Start -->
   <nav class="nav">
-    <div class="ham" tabindex="0"><span></span></div>
     <div class="wide-wrapper"> <!-- Used to center nav content -->
       <a href="#home" class="smooth-scroll">
         <!-- Logo Start -->
@@ -22,6 +19,7 @@
         </svg>
         <!-- Logog End -->
       </a>
+      <div class="hamburger" tabindex="0"><span></span></div>
       <ul class="menu">
         <li><a href="#home" class="smooth-scroll">Home</a></li>
         <li><a href="#about" class="smooth-scroll">About</a></li>
@@ -37,8 +35,8 @@
   <main class="main">
 
     <!-- Section start/ home-->
-    <section id="home" class="section-start">
-      <div class="start-wrap"> <!-- Used to group content to better use flexbox -->
+    <section id="home" class="section section-home flex">
+      <div class="start-wrap text-center"> <!-- Used to group content to better use flexbox -->
         <h1 class="start-title">Arboreal</h1>
         <h2 class="slogan">A workplace that is a alive create ideas that live on.</h2>
       </div>
@@ -46,21 +44,21 @@
     <!-- Section start/ home End -->
 
     <!-- Section About -->
-    <section id="about" class="section-about">
-      <h5 class="paragraph center wrapper">Arboreal revolutionizes the way you think about plants in an office environment. Arboreal isn't just a a delivery service for plants, it's a delivery service for new ideas. Arboreal makes it easy to keep your workplace fresh and oxygenated.</h5>
+    <section id="about" class="section section-about">
+      <h5 class="paragraph text-center wrapper">Arboreal revolutionizes the way you think about plants in an office environment. Arboreal isn't just a a delivery service for plants, it's a delivery service for new ideas. Arboreal makes it easy to keep your workplace fresh and oxygenated.</h5>
     </section>
     <!-- Section About End -->
 
     <!-- Section Themes -->
-    <section id="themes" class="section-theme">
-      <h2 class="big-title center">Themes</h2>
+    <section id="themes" class="section section-theme">
+      <h2 class="big-title text-center themes-title">Themes</h2>
 
       <!-- Theme Aloha Start -->
-      <section class="theme-section wide-wrapper">
+      <section class="theme-section flex wide-wrapper">
         <div class="theme-img">
           <img src="img/themes/aloha.jpg" alt="">
         </div>
-        <div class="theme-text">
+        <div class="theme-text flex">
           <div class="theme-text-position">
             <h2 class="title">Aloha</h2>
             <p class="paragraph">This rich theme includes exotic coconuts spilling all over the floor combined with palm trees that hang down and are always in the way of your daily workflow. This theme is very complicated, suitable for complex startups with a unclear monetizing strategy.</p>
@@ -70,11 +68,11 @@
       <!-- Theme Aloha End -->
 
       <!-- Theme Siberia Start -->
-      <section class="theme-section reverse wide-wrapper">
+      <section class="theme-section flex reverse wide-wrapper">
         <div class="theme-img">
           <img src="img/themes/siberia.jpg" alt="">
         </div>
-        <div class="theme-text">
+        <div class="theme-text flex">
           <div class="theme-text-position">
             <h2 class="title">Siberia</h2>
             <p class="paragraph">Dead plants everywhere. Plants sprayed with white color to give that cold secluded look.</p>
@@ -84,11 +82,11 @@
       <!-- Theme Siberia End -->
 
       <!-- Theme Exotique Nørdic Start -->
-      <section class="theme-section wide-wrapper">
+      <section class="theme-section flex wide-wrapper">
         <div class="theme-img">
           <img src="img/themes/nordic.jpg" alt="">
         </div>
-        <div class="theme-text">
+        <div class="theme-text flex">
           <div class="theme-text-position">
             <h2 class="title">Exotique Nørdic</h2>
             <p class="paragraph">Everything is pine and spruce. Get that Norrlands inland-look in your office. Comes with a Christmas Decoration Extension Pack for the first 100 subscribers (Bears not included).</p>
@@ -107,13 +105,13 @@
     <!-- Section Price Start -->
     <section id="price" class="section-price wrapper">
 
-      <div class="price-header">
-        <h2 class="big-title center">Pricing</h2>
-        <p class="paragraph center">Find the plan that suits you and your business!</p>
+      <div class="price-header text-center">
+        <h2 class="big-title">Pricing</h2>
+        <p class="paragraph">Find the plan that suits you and your business!</p>
       </div>
 
-      <div class="price-wrap"> <!-- ie är dum -->
-        <article class="price-box">
+      <div class="price-wrap flex"> <!-- ie är dum -->
+        <article class="price-box flex">
           <h3 class="small-title">Standard</h3>
           <ul class="small-paragraph">
             <li>Watering not included</li>
@@ -122,7 +120,7 @@
           <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
         </article>
 
-        <article class="price-box">
+        <article class="price-box flex">
           <h3 class="small-title">Premium</h3>
           <ul class="small-paragraph">
             <li>Watering included</li>
@@ -131,7 +129,7 @@
           <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
         </article>
 
-        <article class="price-box">
+        <article class="price-box flex">
           <h3 class="small-title">Exclusive</h3>
           <ul class="small-paragraph">
             <li>Web-controlled automated watering system included</li>
@@ -155,7 +153,7 @@
         </div>
 
         <!-- Contact Body Start -->
-        <section class="contact-body">
+        <section class="contact-body flex">
 
           <div class="contact-s1">
             <h3 class="small-title">Send us a Message</h3>
@@ -183,7 +181,7 @@
             </form>
           </div>
 
-          <div class="contact-s2">
+          <div class="contact-s2 flex">
             <div class="contact-info"> <!-- Used to group text to position -->
               <h3 class="small-title">Contact Information</h3>
               <p class="icon-home">Birger Jarlsgatan 12<br>Stockholm</p>
