@@ -1,0 +1,6 @@
+/* Section Themes */
+.theme-section.reverse{ text-align: left; }
+.theme-text{ padding: 48px; }
+
+/* Section Divider */
+.section-divider{ background-attachment: scroll; }

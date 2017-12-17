@@ -27,3 +27,19 @@ Detta är från att ha laddat typsnitt från Google Fonts med import metoden.
 
 
 ## Breakpoints
+
+
+## Fallback
+
+### \@support
+Man önskar att supporten för \@support var bättre speciellt för webbläsare som ie9 och tidigare men så är inte fallet. Den känns ganska menigslös i många lägen speciellt om man kollar på supporten för t.ex. flexbox och rem som har bättre support än support.
+
+Jag kan tänka mig att den i framtiden när t.ex. flex börjar anses gammalt kan vara väldigt användbar, men just nu ser jag inte riktigt hur den skulle användas. Det är kanske därför man inte ser eller hör talas om det så mycket?
+
+### ie9, ie8 och tidigare
+Jag har kunnat testa sidan och det funkar utan problem på IE10, den funkar även utan några större problem på IE9 men man märker att supporten för flexbox är nästan icke existerande. Det är ingenting som inte går att fixa med fallbacks.
+
+IE8 är där allt går sönder, supporten för allt eller iallfall det mesta är lika med 0.
+
+### Semantisk HTML
+Fallbacken för semantisk html är inte bra och det går inte att använda på äldre webbläsare därför valde jag att använda `div` istället. IE8 supportar det inte alls och det går därför inte att styla någonting och IE9-11 supportar det till viss del.
