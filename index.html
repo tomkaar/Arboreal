@@ -8,12 +8,15 @@
   <!--[if lte IE 8]>
     <link rel="stylesheet" type="text/css" href="ie8fallback.css" />
   <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="assets/js/html5shiv/html5shiv.min.js"></script>
+  <![endif]-->
   <title>Arboreal</title>
 </head>
 <body>
 
   <!-- Naviagtion Start -->
-  <div class="nav">
+  <nav class="nav">
     <div class="wide-wrapper"> <!-- Used to center nav content -->
       <a href="#home" class="smooth-scroll">
         <!-- Logo Start -->
@@ -29,33 +32,33 @@
         <li><a href="#contact" class="smooth-scroll">Contact</a></li>
       </ul>
     </div>
-  </div>
+  </nav>
   <!-- Navigation End -->
 
   <!-- Main Start -->
-  <div class="main">
+  <main class="main">
 
     <!-- Section start/ home-->
-    <div id="home" class="section section-home flex">
+    <section id="home" class="section section-home flex">
       <div class="start-wrap text-center"> <!-- Used to group content to better use flexbox -->
         <h1 class="start-title">Arboreal</h1>
         <h2 class="slogan">A workplace that is a alive create ideas that live on.</h2>
       </div>
-    </div>
+    </section>
     <!-- Section start/ home End -->
 
     <!-- Section About -->
-    <div id="about" class="section section-about">
+    <section id="about" class="section section-about">
       <h5 class="paragraph text-center wrapper">Arboreal revolutionizes the way you think about plants in an office environment. Arboreal isn't just a a delivery service for plants, it's a delivery service for new ideas. Arboreal makes it easy to keep your workplace fresh and oxygenated.</h5>
-    </div>
+    </section>
     <!-- Section About End -->
 
     <!-- Section Themes -->
-    <div id="themes" class="section section-theme">
+    <section id="themes" class="section section-theme">
       <h2 class="big-title text-center themes-title">Themes</h2>
 
       <!-- Theme Aloha Start -->
-      <div class="theme-section flex wide-wrapper">
+      <article class="theme-section flex wide-wrapper">
         <div class="theme-img">
           <img src="img/themes/aloha.jpg" alt="">
         </div>
@@ -66,11 +69,11 @@
           </div>
         </div>
         <div class="clearfix"></div>
-      </div>
+      </article>
       <!-- Theme Aloha End -->
 
       <!-- Theme Siberia Start -->
-      <div class="theme-section flex reverse wide-wrapper">
+      <article class="theme-section flex reverse wide-wrapper">
         <div class="theme-img">
           <img src="img/themes/siberia.jpg" alt="">
         </div>
@@ -81,11 +84,11 @@
           </div>
         </div>
         <div class="clearfix"></div>
-      </div>
+      </article>
       <!-- Theme Siberia End -->
 
       <!-- Theme Exotique Nørdic Start -->
-      <div class="theme-section flex wide-wrapper">
+      <article class="theme-section flex wide-wrapper">
         <div class="theme-img">
           <img src="img/themes/nordic.jpg" alt="">
         </div>
@@ -96,11 +99,11 @@
           </div>
         </div>
         <div class="clearfix"></div>
-      </div>
+      </article>
       <!-- Theme Exotique Nørdic End -->
 
       <div class="clearfix"></div>
-    </div>
+    </section>
     <!-- Section Themes End -->
 
     <!-- Section Divider Start -->
@@ -108,7 +111,7 @@
     <!-- Section Divider End -->
 
     <!-- Section Price Start -->
-    <div id="price" class="section-price wrapper">
+    <section id="price" class="section-price wrapper">
 
       <div class="price-header text-center">
         <h2 class="big-title">Pricing</h2>
@@ -116,25 +119,25 @@
       </div>
 
       <div class="price-wrap flex"> <!-- ie är dum -->
-        <div class="price-box flex">
+        <article class="price-box flex">
           <h3 class="small-title">Standard</h3>
           <ul class="small-paragraph">
             <li>Watering not included</li>
             <li>No change of dead plants, monthly plant change</li>
           </ul>
           <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
-        </div>
+        </article>
 
-        <div class="price-box flex">
+        <article class="price-box flex">
           <h3 class="small-title">Premium</h3>
           <ul class="small-paragraph">
             <li>Watering included</li>
             <li>Exchange of dead plants included, monthly plant change</li>
           </ul>
           <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
-        </div>
+        </article>
 
-        <div class="price-box flex">
+        <article class="price-box flex">
           <h3 class="small-title">Exclusive</h3>
           <ul class="small-paragraph">
             <li>Web-controlled automated watering system included</li>
@@ -143,16 +146,16 @@
             <li>Only locally grown plants. Exotic plants flown in by private jet</li>
           </ul>
           <a href="#contact" class="btn button-price smooth-scroll">Get In Touch</a>
-        </div>
+        </article>
         <div class="clearfix"></div>
       </div>
       <div class="clearfix"></div>
 
-    </div>
+    </section>
     <!-- Section Price End -->
 
     <!-- Section Contact Start -->
-    <div id="contact" class="section-contact">
+    <section id="contact" class="section-contact">
       <div class="wrapper">
 
         <div class="contact-head"> <!-- Content Head End -->
@@ -160,9 +163,9 @@
         </div>
 
         <!-- Contact Body Start -->
-        <div class="contact-body flex">
+        <section class="contact-body flex">
 
-          <div class="contact-s1">
+          <section class="contact-s1">
             <h3 class="small-title">Send us a Message</h3>
             <form name="contactForm" action="contactForm.php" method="post" class="contact-form">
               <label for="name" class="label">Full Name</label>
@@ -186,31 +189,31 @@
 
               <input type="submit" value="Send" class="btn submit">
             </form>
-          </div>
+          </section>
 
-          <div class="contact-s2 flex">
+          <section class="contact-s2 flex">
             <div class="contact-info"> <!-- Used to group text to position -->
               <h3 class="small-title">Contact Information</h3>
               <p class="icon-home">Birger Jarlsgatan 12<br>Stockholm</p>
-              <p class="icon-phone">Tel: 08-56 57 30</p>
+              <p class="icon-phone"><a href="tel:08-56-57-30">Tel: 08-56 57 30</a></p>
             </div>
             <div class="contact-icons"> <!-- Used to group icons to position -->
               <img src="img/social/facebook.png" alt="">
               <img src="img/social/twitter.png" alt="">
               <p>@Arboreal</p>
             </div>
-          </div>
+          </section>
           <div class="clearfix"></div>
 
-        </div>
+        </section>
         <!-- Contact Body End -->
         <div class="clearfix"></div>
       </div>
-    </div>
+    </section>
     <!--  Section Contact End -->
 
     <!-- Section Footer Start -->
-    <div class="footer">
+    <footer class="footer">
       <div class="wrapper">
         <a href="#home" class="smooth-scroll">
           <img src="img/logo/white.png" alt="arboreral logo" class="footer-logo">
@@ -223,13 +226,13 @@
           <li><a href="#contact" class="smooth-scroll">Contact</a></li>
         </ul>
       </div>
-    </div>
+    </footer>
     <!-- Section Footer End -->
 
-  </div>
+  </main>
   <!-- Main Content End -->
 
-  <script src="jquery.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
   <script src="functions.js"></script>
 
 </body>

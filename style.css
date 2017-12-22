@@ -77,6 +77,16 @@ html, body{
     .menu a:focus{ color: #00A99D; }
     .menu a:active{ color: #444444; }
 
+  /* footer tel */
+  .icon-phone a:link{
+    color: white;
+    text-decoration: none;
+  }
+    .icon-phone a:visited{ color: white; }
+    .icon-phone a:hover,
+    .icon-phone a:focus{ color: black; }
+    .icon-phone a:active{ color: white; }
+
 /* Global */
 .btn{
   padding: 10px 16px;
@@ -585,14 +595,12 @@ main{ margin-top: 80px; margin-top: 5rem; }
   .contact-icons{ margin-top: 2rem; }
 
 }
-/* ie 10+ fallback */
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+/* ie 9 & 10 fallback */
+@media screen and (min-width:0\0) {
    .section-divider{
      background-attachment: scroll !important;
    }
 }
-
-
 
 @supports ((display: -webkit-box) or (display: flex)) {
   .price-box{ max-width: 290px;  float: none; }
